@@ -20,11 +20,8 @@ class Config(object):
     LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001962386072"))
     MONGO_URI = getenv("MONGO_DB_URI", "mongodb+srv://Rachit:Rachit@cluster0.hzww9ra.mongodb.net/?retryWrites=true&w=majority")
     REDIS_URL = "redis://default:wK6ZCiclq4iQKYpgfY90v6kd6WdPfEwl@redis-10186.c263.us-east-1-2.ec2.cloud.redislabs.com:10186/default"
-    DATABASE_URL = getenv("DATABASE_URL")
+    DATABASE_URL = getenv("DATABASE_URL") 
 
-    # ɴᴏ ᴇᴅɪᴛ ᴢᴏɴᴇ
-    if DATABASE_URL.startswith("mongodb+srv://Rachit:Rachit@cluster0.hzww9ra.mongodb.net/?retryWrites=true&w=majority"):
-        DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://")
 
 
 class Production(Config):
