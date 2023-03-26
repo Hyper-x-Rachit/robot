@@ -23,7 +23,7 @@ class Config(object):
     DATABASE_URL = getenv("DATABASE_URL")
 
     # ɴᴏ ᴇᴅɪᴛ ᴢᴏɴᴇ
-    if DATABASE_URL.startswith("postgres://"):
+    if DATABASE_URL.startswith("mongodb+srv://Rachit:Rachit@cluster0.hzww9ra.mongodb.net/?retryWrites=true&w=majority"):
         DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://")
 
 
